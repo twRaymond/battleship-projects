@@ -1,0 +1,60 @@
+input[type=text],input[type=password] {
+	padding: 1px;
+	border: 2px solid #ccc;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+input[type=text]:focus,input[type=password]:focus {
+	border-color: #fff;
+}
+
+input[type=submit],input[type=button] {
+	padding: 3px 15px;
+	background: #ccc;
+	border: 0 none;
+	cursor: pointer;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+input[type=submit]:hover, input[type=button]:hover {
+	background: #aaa;
+	color: RGB(255, 255, 255);
+	font-size: 85%;
+}
+
+input[type=submit]:active, input[type=button]:active {
+	background: #808080;
+	color: RGB(255, 5, 5);
+}
+.div_room_name {
+	valign: top;
+}
+
+.div_room_wait {
+	width: 100%;
+	text-align: center;
+	background-color: green;
+	color: #DDDDDD;
+}
+
+.div_room_full {
+	width: 100%;
+	text-align: center;
+	background-color: red;
+	color: #DDDDDD;
+}
+
+.div_room_paly {
+	width: 100%;
+	text-align: center;
+	background-color: blue;
+	color: #DDDDDD;
+}
+.btn_ready_lock {
+	color: black;
+}
+.btn_ready_unlock {
+	color: red;
+}

@@ -1,0 +1,9 @@
+label {
+	display: inline-block; 
+	width:80px;
+}
+
+em {
+	font-family: "lucida sans unicode", "lucida grande", sans-serif;
+	color : RGB(255,0,0);
+}

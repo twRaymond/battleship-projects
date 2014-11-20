@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >  
+<mapper namespace="com.battleship.domain.Players">  
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache" readOnly="true"/>  
+  	<!-- 
+  		INTEGER, VARCHAR
+  	 -->
+    <resultMap id="BaseResultMap" type="com.battleship.domain.Players">  
+        <id column="account" property="account" jdbcType="VARCHAR" />  
+        <result column="room_id" property="roomID" jdbcType="VARCHAR" />  
+    </resultMap>  
+      
+    <sql id="Base_Column_List">  
+        account as account,  
+        roomID as roomID
+    </sql>
+      
+    <sql id="Base_Where_Clause">  
+        <where>  
+            <trim prefixOverrides="and">  
+                <if test="account != null"> and account = #{account}</if>  
+                <if test="roomID != null"> and roomID = #{roomID}</if>
+                <if test="accountLike != null"> and account like CONCAT("%",#{account},"%")</if>  
+                <if test="roomIDLike != null"> and roomID like CONCAT("%",#{roomID},"%")</if>  
+            </trim>  
+        </where>  
+        <if test="sorting != null">order by ${sorting}</if>  
+        <if test="offset != null and limit != null">  
+            limit #{offset}, #{limit}  
+        </if>  
+    </sql>  
+      
+    <!-- search count -->  
+    <select id="selectCount" resultType="java.lang.Long" parameterType="java.util.Map">  
+        select count(account)  
+        from players  
+        <include refid="Base_Where_Clause" />  
+    </select>  
+      
+    <!-- search -->  
+    <select id="select" resultMap="BaseResultMap" parameterType="java.util.Map">  
+        select  
+        <include refid="Base_Column_List" />  
+        from players  
+        <include refid="Base_Where_Clause" />  
+    </select>
+    
+    <!-- Delete by account -->  
+    <delete id="deleteByAccount" parameterType="java.lang.String">  
+        delete from players  
+        where account = #{account}  
+    </delete>
+    
+    <!-- Insert-->     
+    <insert id="insert" parameterType="com.battleship.domain.Players">  
+        insert into players (  
+            account,   
+            roomID
+        ) values (  
+            #{account},   
+            #{roomID} 
+        )  
+    </insert>  
+     
+    <update id="update" parameterType="com.battleship.domain.Players">  
+        update players  
+        <set>  
+            <if test="roomID != null">roomID = #{roomID},</if>  
+        </set>  
+        where account = #{account}  
+    </update>
+</mapper>  

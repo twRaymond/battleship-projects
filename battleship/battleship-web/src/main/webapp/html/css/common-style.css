@@ -1,0 +1,162 @@
+label {
+	display: inline-block;
+}
+
+em {
+	font-family: "lucida sans unicode", "lucida grande", sans-serif;
+	color : RGB(255,0,0);
+}
+
+.td-blue-title {
+	width: 25px;
+    height: 25px;
+    text-align: center;
+}
+
+.td-blue {
+	width: 25px;
+    height: 25px;
+	background-color: blue;
+}
+
+.td-gray {
+	width: 25px;
+    height: 25px;
+	background-color: gray;
+}
+
+.td-black {
+	width: 25px;
+    height: 25px;
+	background-color: black;
+}
+
+.td-red-title {
+	width: 25px;
+    height: 25px;
+    text-align: center;
+}
+
+.td-red {
+	width: 25px;
+    height: 25px;
+	background-color: red;
+}
+
+.ship_HP_Y {
+	width: 25px;
+    height: 25px;
+	background-color: green;
+}
+
+.ship_HP_N {
+	width: 25px;
+    height: 25px;
+	background-color: black;
+}
+
+a {
+	text-decoration : none;
+}
+
+.div-ship-active {
+	width: 50px;
+	background-color: lime;
+	color: DimGray;
+}
+
+.div-ship-none {
+	width: 50px;
+	background-color: black;
+	color: DimGray;
+} 
+
+.div-fire-Y {
+	width: 110px;
+	height: 30px;
+	font-size: 25px;
+	background-color: lime;
+	color: DimGray;
+}
+
+.div-fire-N {
+	width: 110px;
+	height: 30px;
+	font-size: 25px;
+	background-color: black;
+	color: DimGray;
+}
+
+.myFleet {
+	background-color: blue;
+	color: #d0d0d0;
+}
+
+.enemyFleet {
+	background-color: red;
+	color: #d0d0d0;
+}
+
+.div_player_lock {
+	width: 60px;
+	text-align: center;
+	background-color: green;
+	color: #DDDDDD;
+}
+
+.div_player_none {
+	width: 60px;
+	text-align: center;
+	background-color: red;
+	color: #DDDDDD;
+}
+
+.td_title {
+	text-align: center;
+	background-color: DimGray;
+	color: #DDDDDD;
+}
+
+.td_room_name_title {
+	width: 80%;
+}
+.td_room_state_title {
+	width: 20%;
+}
+
+.td_room_name_title {
+	text-align: center;
+	width: 80%;
+	background-color: DimGray;
+	color: #DDDDDD;
+}
+.td_room_state_title {
+	text-align: center;
+	width: 20%;
+	background-color: DimGray;
+	color: #DDDDDD;
+}
+.war_history_table {
+	width: 790px; 
+	height: 170px; 
+	background-color: #FFFFFF; 
+	overflow-y:scroll; 
+	SCROLLBAR-FACE-COLOR: #c2d3fc; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #c2d3fc; 
+	SCROLLBAR-SHADOW-COLOR: BLACK; 
+	SCROLLBAR-3DLIGHT-COLOR: #c2d3fc; 
+	SCROLLBAR-ARROW-COLOR:#000000; 
+	SCROLLBAR-TRACK-COLOR: FFFFFF; 
+	SCROLLBAR-DARKSHADOW-COLOR: EAECEC;
+}
+.history_l {
+	width: 118px;
+}
+
+.history_w {
+	width: 158px;
+}
+
+.history_m {
+	width: 480px;
+}
